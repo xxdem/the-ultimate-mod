@@ -21,9 +21,14 @@ NOTICE :: 'temporary template loader put in place'
 
 
 // LOADER
+    // page specific mods
 switch(page.path) {
     case "/local/ocean/embassy/": addResources(['']); break;
     case "/local/ocean/embassy/golem/": addResources(['']); break;
+    case "/local/beneath/embassy/":addResources(["https://adrfurret.neocities.org/corrumods/e3a2_decline.js",
+                                                "https://adrfurret.neocities.org/corrumods/e3a2_morevelziesgleestatuses.js",
+                                                "https://adrfurret.neocities.org/corrumods/e3a2_callresearch.js",
+                                                "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",]); break;
 }
 
 
