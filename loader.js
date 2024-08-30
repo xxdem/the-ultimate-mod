@@ -16,7 +16,7 @@ CREDITS:
         BY: pocl.v (@pocl.v on discord), octo (@ocktoe on discord)
 
 
-NOTICE :: '9 of 14 mods added' ; 'quieter masks, 100% velzie's glee, doubled evil mode, laughterhouse self-proc, unity stowaway'
+NOTICE :: '10 of 14 mods added' ; 'quieter masks, 100% velzie's glee, doubled evil mode, laughterhouse self-proc'
 PLANS :: 'sys menu thing that makes 100% velz gele, doubled, and quieter masks a menu setting'
 */
 
@@ -33,6 +33,8 @@ switch(page.path) {
                                                 "https://adrfurret.neocities.org/corrumods/e3a2_callresearch.js",
                                                 "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
                                                 "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js"]); break;
+    case "/local/ozo/": addResources([""]); break;
+                    
 }
 
     // ones that runs anywhere
