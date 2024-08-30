@@ -33,7 +33,7 @@ switch(page.path) {
                                                 "https://adrfurret.neocities.org/corrumods/e3a2_callresearch.js",
                                                 "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
                                                 "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js"]); break;
-    case "/local/ozo/": addResources([""]); break;
+    case "/local/ozo/": addResources(["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js"]); break;
                     
 }
 
