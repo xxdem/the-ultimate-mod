@@ -22,15 +22,15 @@ NOTICE :: 'temporary template loader put in place'
 
 // LOADER
 switch(page.path) {
-    case "/local/ocean/embassy/golem/": chatter({actor: 'sys', text: `NOTICE::'mod loaded by script load'`, readout: true}); break;
-    default: chatter({actor: 'sys', text: `NOTICE::'mod loaded by script load'`, readout: true}); break;
+    case "/local/ocean/embassy/": addResources(['']); break;
+    case "/local/ocean/embassy/golem/": addResources(['']); break;
 }
 
 
 // EVENT LISTENER
 document.addEventListener('corru_loaded', ()=>{
     switch(page.path) {
-        case "/local/ocean/embassy/golem/": chatter({actor: 'sys', text: `NOTICE::'loaded by event listener'`, readout: true}); break;
-        default: chatter({actor: 'sys', text: `NOTICE::'loaded by event listener'`, readout: true}); break;
+        case "/local/ocean/embassy/": addResources(['']); break;
+        case "/local/ocean/embassy/golem/": addResources(['']); break;
     }
 })
