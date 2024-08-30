@@ -283,7 +283,7 @@ env.dialogues["random_velzie"] = generateDialogueObject(velzieDialogues.sample()
 
 
 // MOD LOAD
-if(Math.floor(Math.random() * 1000) < 20) {
+if(Math.floor(Math.random() * 1000) < 20 && check("hello__sentry-posthello")) {
     forceVelzieOnThisWaywardSinner();  
 } else {
     console.log('velzie avoided');  
