@@ -10,7 +10,7 @@ MODIFIED BY : max :ᶅ (@the_dem on discord)
 
 
 function changeGakvu() {
-    content.insertAdjacentHTML('beforeend', `<link type="text/css" rel="stylesheet" href="https://pocl.vip/corru/bettergak.css">`);
+    content.insertAdjacentHTML('beforeend', `<link type="text/css" rel="stylesheet" href="https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.css">`);
 
     env.dialogueActors.gakvu.image = "https://pocl.vip/corru/bettergak/portrait.gif";
 

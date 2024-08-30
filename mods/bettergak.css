@@ -1,0 +1,37 @@
+/* Picture this: gakvu, the commander of the blood gang, stands tall with a fierce gaze. Her crimson cloak billows in the wind as she rallies her gang members, ready to spill some metaphorical blood. On the other side, we have tozik, the commander of the pee squad, leading his troops with a yellow determination. Fear not, my friends, for this fight is not as gruesome as it sounds.
+
+The battlefield is set in the heart of Corru Observer, the eerie streets illuminated by flickering neon lights. The blood gang, known for their fiery temper and powerful punches, clashes with the pee squad, experts in high-pressure tactics and slick maneuvers. It's a clash of styles, an unconventional skirmish that defies expectations.
+
+As the battle commences, gakvu charges forward with a primal roar, her fists ablaze with crimson energy. She throws punches with precision, each strike leaving a trail of intense heat. Meanwhile, tozik, a master of fluid movements, gracefully evades the onslaught, retaliating with bursts of pressurized pee blasts that stun their adversaries. It's a dance of power and finesse, each move calculated yet unpredictable.
+
+The surroundings come alive as the fight intensifies. Buildings crack under the force of powerful blows, casting dust and debris into the air. The echoes of grunts and battle cries reverberate through the city streets.
+
+But amidst the chaos, a surprising twist unfolds. Suddenly, gakvu and tozik lock eyes, a momentary pause in the midst of the mayhem. Wordlessly, they come to a mutual understanding. The blood and pee squads cease their attacks, strangely united in their realization that violence only begets more violence.
+
+Together, gakvu and tozik call for a truce, signaling an end to the battle. The blood and pee squads sheathe their weapons, their once fiery rivalry replaced with a newfound bond. They stand side by side, a beacon of unity amidst the chaos of Corru Observer.
+
+So there you have it, my friends. A fight scene where, against all odds, blood and pee squads find common ground and choose peace over conflict. burp Sometimes, life surprises us with unexpected alliances and teaches us that understanding and empathy can conquer even the fiercest of battles. Stay united, stay strong, and remember to burp with pride! */
+
+.vn-char#gakvu .head, body[currentdialogue="d3_movefriend_finish"] .vn-char#gakvu .head { background-image: url(https://pocl.vip/corru/bettergak/gak.gif); }
+.vn-wrapper.vn-con #gakvu .head { background-image: url(https://corru.observer/img/sprites/obesk/gakvu/full/connector.gif), url(https://pocl.vip/corru/bettergak/gak.gif); }
+#content[embassyday="1"] .vn-char#gakvu .head { background-image: url(https://corru.observer/img/sprites/obesk/gakvu/full/connectoralt.gif), url(https://pocl.vip/corru/bettergak/gak.gif); }
+
+.gakvu .head { background-image: url(https://pocl.vip/corru/bettergak/gak.gif); }
+body[quality="low"] #content .gakvu {
+    background-image: 
+        url(https://pocl.vip/corru/bettergak/gak.gif),
+        var(--gakvuCoatStage),
+        url(https://corru.observer/img/sprites/obesk/gakvu/stage/gakvu_legs.gif)
+}
+
+.focus .head.gakvu-focus {
+    background-image: url(https://pocl.vip/corru/bettergak/gak.gif);
+    background-size: auto 350%;
+    background-position: -400% -8%;
+    --rotation: rotateX(-90deg);
+    transform: translate(-50%, 75%) var(--rotation);
+}
+
+.focusplane:not([focus]) .head, .focusplane:not([focus]) .head::after {
+    --rotation: rotateX(0deg);
+}
