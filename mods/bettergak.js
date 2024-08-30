@@ -2,7 +2,7 @@
 
 *****   COMPONENT OF :: 'the ultimate modpack'   *****
 MOD : bettergak
-BY : pocl.v (@pocl.v on discord)
+BY : pocl.v (@pocl.v on discord), octo (@ocktoe on discord)
 
 MODIFIED BY : max :ᶅ (@the_dem on discord)
 

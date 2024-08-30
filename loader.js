@@ -13,10 +13,10 @@ CREDITS:
     HAMMER FUNFRIEND, Random Velzie Event
         BY: Niaandovah (@niaandova on discord)
     bettergak
-        BY: pocl.v (@pocl.v on discord)
+        BY: pocl.v (@pocl.v on discord), octo (@ocktoe on discord)
 
 
-NOTICE :: '10 of 14 mods added'
+NOTICE :: '9 of 14 mods added' ; 'quieter masks, 100% velzie's glee, doubled evil mode, laughterhouse self-proc, unity stowaway'
 PLANS :: 'sys menu thing that makes 100% velz gele, doubled, and quieter masks a menu setting'
 */
 
