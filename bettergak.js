@@ -1,4 +1,14 @@
-// bettergak
+/*
+
+*****   COMPONENT OF :: 'the ultimate modpack'   *****
+MOD : bettergak
+BY : pocl.v (@pocl.v on discord)
+
+MODIFIED BY : max :ᶅ (@the_dem on discord)
+
+*/
+
+
 content.insertAdjacentHTML('beforeend', `<link type="text/css" rel="stylesheet" href="https://pocl.vip/corru/bettergak.css">`);
 
 env.dialogueActors.gakvu.image = "https://pocl.vip/corru/bettergak/portrait.gif";
