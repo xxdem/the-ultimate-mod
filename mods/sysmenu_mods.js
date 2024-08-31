@@ -24,7 +24,7 @@ var syshtml = `
         </div>
 
         <div class="sysbox">
-            <h3>Harder Hard Mode</h3>
+            <h3>Harder Mode</h3>
             <p class="sysinfo">Doubles enemy count in BSTRD-ized combative memory streams.</p>
             <div class="buttons">
                 <span onclick="javascript:setDoubledEnemies(true)" class="button double_on">On</span>
@@ -47,6 +47,15 @@ var syshtml = `
             <div class="buttons">
                 <span onclick="javascript:setVelzieGlee(true)" class="button velzieglee_on">On</span>
                 <span onclick="javascript:setVelzieGlee(false)" class="button velzieglee_off">Off</span>
+            </div>
+        </div>
+
+        <div class="sysbox">
+            <h3>Nuh Uh</h3>
+            <p class="sysinfo">Grants invulnerability to hostile thoughtforms contained in THE FUNNY LITTLE ROOM.</p>
+            <div class="buttons">
+                <span onclick="javascript:setNuhUh(true)" class="button nuhuh_on">On</span>
+                <span onclick="javascript:setNuhUh(false)" class="button nuhuh_off">Off</span>
             </div>
         </div>
     </div>
@@ -119,6 +128,21 @@ function setVelzieGlee(pref) {
     change('setting_velzieglee', pref)
 }
 
+function setNuhUh(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'thoughtform repellent applied';'refresh to apply'", readout: true})
+        document.querySelector('.nuhuh_on').classList.add('glow')
+        document.querySelector('.nuhuh_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'repellent deactivated';'refresh to apply'", readout: true})
+        document.querySelector('.nuhuh_on').classList.remove('glow')
+        document.querySelector('.nuhuh_off').classList.add('glow')
+    }
+
+    change('setting_nuhuh', pref)
+}
+
 
 // MOD LOAD
     // dark static
@@ -145,10 +169,18 @@ else {
     document.querySelector('.silentmask_on').classList.remove('glow')
     document.querySelector('.silentmask_off').classList.add('glow')}
 
-    // silent masks
+    // velzie's glee
 if (check('setting_velzieglee')) {
     document.querySelector('.velzieglee_on').classList.add('glow')
     document.querySelector('.velzieglee_off').classList.remove('glow')}
 else {
     document.querySelector('.velzieglee_on').classList.remove('glow')
     document.querySelector('.velzieglee_off').classList.add('glow')}
+
+    // nuh uh
+if (check('setting_nuhuh')) {
+    document.querySelector('.nuhuh_on').classList.add('glow')
+    document.querySelector('.nuhuh_off').classList.remove('glow')}
+else {
+    document.querySelector('.nuhuh_on').classList.remove('glow')
+    document.querySelector('.nuhuh_off').classList.add('glow')}

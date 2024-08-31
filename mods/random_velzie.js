@@ -97,9 +97,9 @@ function forceVelzieOnThisWaywardSinner() {
 
     // kicks & redirects
 function velzieOut(url) {
-    setTimeout(()=>{document.querySelector("#vello").remove()
-    endDialogue()
-    document.querySelector("#velRanStyle").remove()}, 1499)
+    // setTimeout(()=>{document.querySelector("#vello").remove()
+    // endDialogue()
+    // document.querySelector("#velRanStyle").remove()}, 1499)
     
     
     setTimeout(()=>{
@@ -283,8 +283,15 @@ env.dialogues["random_velzie"] = generateDialogueObject(velzieDialogues.sample()
 
 
 // MOD LOAD
-if(Math.floor(Math.random() * 1000) < 20 && check("hello__sentry-posthello")) {
-    forceVelzieOnThisWaywardSinner();  
-} else {
-    console.log('velzie avoided');  
+    // modified so it only runs when not on proceed screen n such
+function runVelzie() {
+    if(Math.floor(Math.random() * 1000) < 20 && check("hello__sentry-posthello")) {
+        forceVelzieOnThisWaywardSinner();  
+    } else {
+        console.log('velzie avoided');  
+    }
+
+    document.removeEventListener('corru_entered', runVelzie, true)
 }
+
+document.addEventListener('corru_entered', runVelzie, true)
