@@ -16,8 +16,7 @@ CREDITS:
         BY: pocl.v (@pocl.v on discord), octo (@ocktoe on discord)
 
 
-NOTICE :: '11 of 14 mods added' ; 'quieter masks, 100% velzie's glee, doubled evil mode'
-PLANS :: 'sys menu thing that makes 100% velz gele, doubled, and quieter masks a menu setting'
+NOTICE :: '14 of 14 mods added' ; 'a lot more to come'
 */
 
 
@@ -31,10 +30,12 @@ switch(page.path) {
         "https://adrfurret.neocities.org/corrumods/overcoherentwaters.js"]); break;
 
     case "/local/ocean/embassy/": addResources([
-        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js"]); break;
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
+        ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
 
     case "/local/ocean/embassy/golem/": addResources([
-        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js"]); break;
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
+        ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
 
     case "/local/beneath/embassy/":addResources([
         "https://adrfurret.neocities.org/corrumods/e3a2_decline.js",
@@ -42,33 +43,59 @@ switch(page.path) {
         "https://adrfurret.neocities.org/corrumods/e3a2_callresearch.js",
         "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
         "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js",
-        "https://dudemine.com/upload/mods/laughterhouse.js"]); break;
+        "https://dudemine.com/upload/mods/laughterhouse.js",
+        ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}],
+        ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_velzieglee')}]]); break;
 
     case "/local/ozo/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js"]); break;
-                    
 }
 
     // ones that runs anywhere
-addResources(['https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js'])
+addResources([
+    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
+    ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_silentmasks')}]
+])
+
+    // run once but not on corru_loaded
+addResources(['https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js'])
 
 
 // EVENT LISTENER
 document.addEventListener('corru_loaded', ()=>{
-        // page specific mods
+    // page specific mods
     switch(page.path) {
-        case "/hub/": addResources(["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/hammer_funf.js"]); break;
-        case "/local/ocean/": addResources(["https://adrfurret.neocities.org/corrumods/overcoherentwaters.js"]); break;
-        case "/local/ocean/embassy/": addResources(["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js"]); break;
-        case "/local/ocean/embassy/golem/": addResources(["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js"]); break;
-        case "/local/beneath/embassy/":addResources(["https://adrfurret.neocities.org/corrumods/e3a2_decline.js",
-                                                    "https://adrfurret.neocities.org/corrumods/e3a2_morevelziesgleestatuses.js",
-                                                    "https://adrfurret.neocities.org/corrumods/e3a2_callresearch.js",
-                                                    "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
-                                                    "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js"]); break;
-        case "/local/ozo/": addResources(["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js"]); break;
+        case "/hub/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/hammer_funf.js"]); break;
+    
+        case "/local/ocean/": addResources([
+            "https://adrfurret.neocities.org/corrumods/overcoherentwaters.js"]); break;
+    
+        case "/local/ocean/embassy/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
+            ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
+    
+        case "/local/ocean/embassy/golem/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
+            ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
+    
+        case "/local/beneath/embassy/":addResources([
+            "https://adrfurret.neocities.org/corrumods/e3a2_decline.js",
+            "https://adrfurret.neocities.org/corrumods/e3a2_morevelziesgleestatuses.js",
+            "https://adrfurret.neocities.org/corrumods/e3a2_callresearch.js",
+            "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
+            "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js",
+            "https://dudemine.com/upload/mods/laughterhouse.js",
+            ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}],
+            ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_velzieglee')}]]); break;
+    
+        case "/local/ozo/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js"]); break;
     }
-
+    
         // ones that runs anywhere
-    addResources(['https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js'])
+    addResources([
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
+        ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_silentmasks')}]
+    ])
 })
