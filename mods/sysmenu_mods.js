@@ -53,7 +53,7 @@ var syshtml = `
 </details>
 `
 
-if(!body.querySelector('#system-menu').innerHTML.includes(syshtml)) {
+if(!body.querySelector('#system-menu').innerHTML.includes("<details class=\"sysblock center\" id=\"mod-select\">")) {
     body.querySelector('#system-menu').innerHTML += syshtml
 }
 

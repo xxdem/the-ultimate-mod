@@ -54,11 +54,14 @@ switch(page.path) {
     // ones that runs anywhere
 addResources([
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
-    ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_silentmasks')}]
+    ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_silentmasks')}],
+    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js"
 ])
 
     // run once but not on corru_loaded
-addResources(['https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js'])
+addResources([
+    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js"
+])
 
 
 // EVENT LISTENER
