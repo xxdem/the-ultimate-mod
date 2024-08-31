@@ -18,19 +18,27 @@ CREDITS:
         BY: cyril (@cantharus on discord)
     BetterNAV
         BY : overcast system (@overcastwarmth on discord)
-    normal moth
+    normal moth (+ expansion)
         BY : sawlf (@sawlferton on discord)
-    darkstatic
+    bad apple on gakvu's poncho
+        BY : garlic (@garlic_os on discord)
+    darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT
         BY: max/dem (@the_dem on discord)
 
 
-NOTICE :: '3 more mods added' ; 'total count at 18'
+NOTICE :: 'total count at 23' ; '24 if you count normal moth expansion'
 */
 
 
 // LOADER
     // page specific mods
 switch(page.path) {
+    case "/": addResources([
+        "https://file.garden/ZBykMtEMpVTUWZ-e/dialoguetelephone/telephone_start.js"]); break;
+
+    case "/hello/": addResources([
+        "https://file.garden/ZBykMtEMpVTUWZ-e/dialoguetelephone/telephone_hello.js"]); break;
+
     case "/hub/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/hammer_funf.js"]); break;
 
@@ -39,7 +47,8 @@ switch(page.path) {
 
     case "/local/ocean/embassy/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
-        ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+        ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
 
     case "/local/ocean/ship/interview/": addResources([
         ["https://cantharus.nekoweb.org/dump/nospookies.js", ()=>{return check('setting_nuhuh')}]
@@ -47,6 +56,7 @@ switch(page.path) {
 
     case "/local/ocean/embassy/golem/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
 
     case "/local/beneath/embassy/":addResources([
@@ -56,11 +66,14 @@ switch(page.path) {
         "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
         "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js",
         "https://dudemine.com/upload/mods/laughterhouse.js",
+        "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.observer_final.js",
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}],
         ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_velzieglee')}]]); break;
 
     case "/local/ozo/": addResources([
-        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js"]); break;
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js",
+        "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js"
+        ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/no_spin.js", ()=>{return check('setting_nospin')}]]); break;
 }
 
     // ones that runs anywhere
@@ -68,13 +81,15 @@ addResources([
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
     ["https://file.garden/ZfLavVA4xzfd-zhM/quiet_masks.js", ()=>{return check('setting_silentmasks')}],
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js",
-    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/normal_moth.js"
+    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/normal_moth.js",
+    ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
 ])
 
     // run once but not on corru_loaded
 addResources([
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js", ()=>{return check('setting_flashing')}],
-    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betterNAV.js"
+    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betterNAV.js",
+    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/expanded_ent.js", ()=>{return check('setting_expandedent')}]
 ])
 
 
@@ -82,24 +97,32 @@ addResources([
 document.addEventListener('corru_loaded', ()=>{
         // page specific mods
     switch(page.path) {
+        case "/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/dialoguetelephone/telephone_start.js"]); break;
+    
+        case "/hello/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/dialoguetelephone/telephone_hello.js"]); break;
+    
         case "/hub/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/hammer_funf.js"]); break;
-
+    
         case "/local/ocean/": addResources([
             "https://adrfurret.neocities.org/corrumods/overcoherentwaters.js"]); break;
-
+    
         case "/local/ocean/embassy/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
-            ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
-
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+            ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
+    
         case "/local/ocean/ship/interview/": addResources([
             ["https://cantharus.nekoweb.org/dump/nospookies.js", ()=>{return check('setting_nuhuh')}]
         ])
-
+    
         case "/local/ocean/embassy/golem/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
-
+    
         case "/local/beneath/embassy/":addResources([
             "https://adrfurret.neocities.org/corrumods/e3a2_decline.js",
             "https://adrfurret.neocities.org/corrumods/e3a2_morevelziesgleestatuses.js",
@@ -107,18 +130,22 @@ document.addEventListener('corru_loaded', ()=>{
             "https://adrfurret.neocities.org/corrumods/e3a2_fintrusive.js",
             "https://adrfurret.neocities.org/corrumods/e3a2_missingenemies.js",
             "https://dudemine.com/upload/mods/laughterhouse.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.observer_final.js",
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}],
             ["https://dudemine.com/upload/mods/laughterhouse.js", ()=>{return check('setting_velzieglee')}]]); break;
-
+    
         case "/local/ozo/": addResources([
-            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js"]); break;
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js"
+            ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/no_spin.js", ()=>{return check('setting_nospin')}]]); break;
     }
-
+    
         // ones that runs anywhere
     addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
         ["https://file.garden/ZfLavVA4xzfd-zhM/quiet_masks.js", ()=>{return check('setting_silentmasks')}],
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js",
-        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/normal_moth.js"
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/normal_moth.js",
+        ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
     ])
 })

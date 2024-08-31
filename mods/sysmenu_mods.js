@@ -58,12 +58,39 @@ var syshtml = `
                 <span onclick="javascript:setNuhUh(false)" class="button nuhuh_off">Off</span>
             </div>
         </div>
+
+        <div class="sysbox">
+            <h3>bitch</h3>
+            <p class="sysinfo">Makes moth a little more normal.</p>
+            <div class="buttons">
+                <span onclick="javascript:setNormalMoth(true)" class="button normalmoth_on">On</span>
+                <span onclick="javascript:setNormalMoth(false)" class="button normalmoth_off">Off</span>
+            </div>
+        </div>
+
+        <div class="sysbox">
+            <h3>noSpin</h3>
+            <p class="sysinfo">Forces neural render to fixed position when talking to entity COUNCIL.</p>
+            <div class="buttons">
+                <span onclick="javascript:setNoSpin(true)" class="button nospin_on">On</span>
+                <span onclick="javascript:setNoSpin(false)" class="button nospin_off">Off</span>
+            </div>
+        </div>
+
+        <div class="sysbox">
+            <h3>expanded ENT</h3>
+            <p class="sysinfo">Sets EXM menu to expand locational examines by default.</p>
+            <div class="buttons">
+                <span onclick="javascript:setExpanded(true)" class="button expandedent_on">On</span>
+                <span onclick="javascript:setExpanded(false)" class="button expandedent_off">Off</span>
+            </div>
+        </div>
     </div>
 </details>
 `
 
 if(!body.querySelector('#system-menu').innerHTML.includes("<details class=\"sysblock center\" id=\"mod-select\">")) {
-    body.querySelector('#system-menu').innerHTML += syshtml
+    body.querySelector('#system-menu').insertAdjacentHTML('beforeend', syshtml)
 }
 
 
@@ -143,6 +170,51 @@ function setNuhUh(pref) {
     change('setting_nuhuh', pref)
 }
 
+function setNormalMoth(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.normalmoth_on').classList.add('glow')
+        document.querySelector('.normalmoth_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.normalmoth_on').classList.remove('glow')
+        document.querySelector('.normalmoth_off').classList.add('glow')
+    }
+
+    change('setting_normalmoth', pref)
+}
+
+function setNoSpin(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.nospin_on').classList.add('glow')
+        document.querySelector('.nospin_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.nospin_on').classList.remove('glow')
+        document.querySelector('.nospin_off').classList.add('glow')
+    }
+
+    change('setting_nospin', pref)
+}
+
+function setExpanded(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.expandedent_on').classList.add('glow')
+        document.querySelector('.expandedent_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.expandedent_on').classList.remove('glow')
+        document.querySelector('.expandedent_off').classList.add('glow')
+    }
+
+    change('setting_expandedent', pref)
+}
+
 
 // MOD LOAD
     // dark static
@@ -184,3 +256,27 @@ if (check('setting_nuhuh')) {
 else {
     document.querySelector('.nuhuh_on').classList.remove('glow')
     document.querySelector('.nuhuh_off').classList.add('glow')}
+
+    // normalmoth
+if (check('setting_normalmoth')) {
+    document.querySelector('.normalmoth_on').classList.add('glow')
+    document.querySelector('.normalmoth_off').classList.remove('glow')}
+else {
+    document.querySelector('.normalmoth_on').classList.remove('glow')
+    document.querySelector('.normalmoth_off').classList.add('glow')}
+
+    // nospin
+if (check('setting_nospin')) {
+    document.querySelector('.nospin_on').classList.add('glow')
+    document.querySelector('.nospin_off').classList.remove('glow')}
+else {
+    document.querySelector('.nospin_on').classList.remove('glow')
+    document.querySelector('.nospin_off').classList.add('glow')}
+
+    // expandedent
+if (check('setting_expandedent')) {
+    document.querySelector('.expandedent_on').classList.add('glow')
+    document.querySelector('.expandedent_off').classList.remove('glow')}
+else {
+    document.querySelector('.expandedent_on').classList.remove('glow')
+    document.querySelector('.expandedent_off').classList.add('glow')}
