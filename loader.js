@@ -60,7 +60,7 @@ addResources([
 
     // run once but not on corru_loaded
 addResources([
-    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js"
+    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js", ()=>{return check('setting_flashing')}]
 ])
 
 
