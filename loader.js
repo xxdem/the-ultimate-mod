@@ -22,11 +22,11 @@ CREDITS:
         BY : sawlf (@sawlferton on discord)
     bad apple on gakvu's poncho
         BY : garlic (@garlic_os on discord)
-    darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools
+    darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin'
         BY: max/dem (@the_dem on discord)
 
 
-NOTICE :: 'total count at 28'
+NOTICE :: 'total count at 30'
 */
 
 
@@ -55,6 +55,7 @@ switch(page.path) {
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
 
     case "/local/ocean/ship/interview/": addResources([
+        "https://file.garden/ZBykMtEMpVTUWZ-e/funny/FUNNYLITTLEMAZE_FORK.js"
         ["https://cantharus.nekoweb.org/dump/nospookies.js", ()=>{return check('setting_nuhuh')}]
     ])
 
@@ -93,7 +94,8 @@ addResources([
 addResources([
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js", ()=>{return check('setting_flashing')}],
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betterNAV.js",
-    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/expanded_ent.js", ()=>{return check('setting_expandedent')}]
+    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/expanded_ent.js", ()=>{return check('setting_expandedent')}],
+    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/corruobserving.js", ()=>{return check('setting_corruobserver')}]
 ])
 
 
@@ -123,6 +125,7 @@ document.addEventListener('corru_loaded', ()=>{
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
     
         case "/local/ocean/ship/interview/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/funny/FUNNYLITTLEMAZE_FORK.js"
             ["https://cantharus.nekoweb.org/dump/nospookies.js", ()=>{return check('setting_nuhuh')}]
         ])
     

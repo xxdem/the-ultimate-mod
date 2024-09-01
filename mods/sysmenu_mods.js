@@ -85,6 +85,15 @@ var syshtml = `
                 <span onclick="javascript:setExpanded(false)" class="button expandedent_off">Off</span>
             </div>
         </div>
+
+        <div class="sysbox">
+            <h3>corru observer</h3>
+            <p class="sysinfo">Woah! I guess I'm some sort of corru observer now.</p>
+            <div class="buttons">
+                <span onclick="javascript:setCorruObserver(true)" class="button corruobserver_on">On</span>
+                <span onclick="javascript:setCorruObserver(false)" class="button corruobserver_off">Off</span>
+            </div>
+        </div>
     </div>
 </details>
 `
@@ -231,6 +240,21 @@ function setExpanded(pref) {
     change('setting_expandedent', pref)
 }
 
+function setCorruObserver(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'annoyance enabled';'refresh to apply'", readout: true})
+        document.querySelector('.corruobserver_on').classList.add('glow')
+        document.querySelector('.corruobserver_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'annoyance enabled';'refresh to apply'", readout: true})
+        document.querySelector('.corruobserver_on').classList.remove('glow')
+        document.querySelector('.corruobserver_off').classList.add('glow')
+    }
+
+    change('setting_corruobserver', pref)
+}
+
 
 // MOD LOAD
     // dark static
@@ -296,3 +320,11 @@ if (check('setting_expandedent')) {
 else {
     document.querySelector('.expandedent_on').classList.remove('glow')
     document.querySelector('.expandedent_off').classList.add('glow')}
+
+    // corru observin'
+if (check('setting_corruobserver')) {
+    document.querySelector('.corruobserver_on').classList.add('glow')
+    document.querySelector('.corruobserver_off').classList.remove('glow')}
+else {
+    document.querySelector('.corruobserver_on').classList.remove('glow')
+    document.querySelector('.corruobserver_off').classList.add('glow')}
