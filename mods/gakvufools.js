@@ -279,6 +279,8 @@ function painnnn() {
 }
 
 function gakvuFooled(){
+    change('gakvu_fooled', true)
+
     setTimeout(()=>{
         cutscene(true)
         MUI("off")
