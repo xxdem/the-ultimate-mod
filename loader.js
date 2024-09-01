@@ -17,11 +17,13 @@ CREDITS:
     nuh uh
         BY: cyril (@cantharus on discord)
     BetterNAV
-        BY : overcast system (@overcastwarmth on discord)
+        BY: overcast system (@overcastwarmth on discord)
     normal moth, bitch!
-        BY : sawlf (@sawlferton on discord)
+        BY: sawlf (@sawlferton on discord)
     bad apple on gakvu's poncho
-        BY : garlic (@garlic_os on discord)
+        BY: garlic (@garlic_os on discord)
+    bozko smash
+        BY: shaman (@shaseng on discord)
     darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny
         BY: max/dem (@the_dem on discord)
 
@@ -63,6 +65,7 @@ switch(page.path) {
     case "/local/ocean/embassy/golem/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bozko_smash.js",
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
 
     case "/local/beneath/embassy/":addResources([
@@ -123,6 +126,7 @@ document.addEventListener('corru_loaded', ()=>{
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/cerveza_cristal.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/kazki_vo.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakvufools.js",
+            ["https://file.garden/ZBykMtEMpVTUWZ-e/collapsefunny.js", ()=>{return check("fbx__ep2intro-end")}],
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
     
         case "/local/ocean/ship/interview/": addResources([
@@ -133,6 +137,7 @@ document.addEventListener('corru_loaded', ()=>{
         case "/local/ocean/embassy/golem/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bozko_smash.js",
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
     
         case "/local/beneath/embassy/":addResources([
