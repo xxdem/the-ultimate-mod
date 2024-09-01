@@ -10,6 +10,12 @@ document.head.appendChild(document.createElement('style').appendChild(document.c
 
 
 // HTML INJECTION
+    // gets rid of the menu return button and gad temporarily
+let menureturnholder = body.querySelector('#system-menu .menureturn')
+let gadholder = body.querySelector('#system-menu .mindsci-status')
+
+body.querySelectorAll('#system-menu .menureturn, .mindsci-status').forEach((el)=>{el.remove()})
+
 var syshtml = `
 <details class="sysblock center" id="mod-select">
     <summary>Mod Options</summary>
@@ -90,8 +96,12 @@ var syshtml = `
 `
 
 if(!body.querySelector('#system-menu').innerHTML.includes("<details class=\"sysblock center\" id=\"mod-select\">")) {
-    body.querySelector('#system-menu').insertAdjacentHTML('beforeend', syshtml)
+    body.querySelector('#system-menu').insertAdjacentHTML('afterbegin', syshtml)
 }
+
+    // the return button and gad returns
+body.querySelector('#system-menu').insertAdjacentElement('afterbegin', menureturnholder)
+body.querySelector('#system-menu').insertAdjacentElement('afterbegin', gadholder)
 
 
 // FUNCTIONS

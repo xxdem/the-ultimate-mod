@@ -26,7 +26,7 @@ CREDITS:
         BY: max/dem (@the_dem on discord)
 
 
-NOTICE :: 'total count at 23' ; '24 if you count normal moth expansion'
+NOTICE :: 'total count at 28'
 */
 
 
