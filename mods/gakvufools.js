@@ -9,12 +9,28 @@ BY : max :ᶅ (@the_dem on discord)
 
 // CSS
 var css = `
-    #content.eject {
-        animation: shake-crazy 100ms linear infinite;
-    }
+#content.eject {
+    animation: shake-crazy 100ms linear infinite;
+}
 `;
 
 document.head.appendChild(document.createElement('style').appendChild(document.createTextNode(css)).parentElement);
+
+    // temp css injector
+content.insertAdjacentHTML('beforeend', `<style>
+body #dialogue-box.slow {
+    transition: opacity 5s ease-in-out, transform 5s ease-in-out;
+}
+
+body.in-dialogue #dialogue-box.distort {
+    transform-origin: bottom;
+    transform: scaleY(5) rotate(70deg) !important;
+}
+
+body #dialogue-box.fade {
+    opacity: 0;
+}
+</style>`);
 
 
 // DIALOGUE
@@ -189,8 +205,8 @@ false
         ¯RI CAž­NNOT FSE’æEL MY B©˚YD
         TI ÎS T½UÒRNING N©√TO Sõ‹SDGE
         ½Òmõ‹SK’æÃE:Ž‹©é·0³Jºž­¥ÙYj0iT¶º½Òmõ‹SK’æÃE:Ž‹©é·0³Jºž­¥ÙYj0i7]ëz¦‹5DÒ
-            EXEC::gakvuFooled(); content.classList.add('eject')
-            WAIT::4000
+            EXEC::gakvuFooled(); content.classList.add('eject'); document.querySelector('#dialogue-box').classList.add('slow', 'distort', 'fade')
+            WAIT::10000
 
 coat
     akizet
