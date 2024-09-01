@@ -58,7 +58,7 @@ switch(page.path) {
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
 
     case "/local/ocean/ship/interview/": addResources([
-        "https://file.garden/ZBykMtEMpVTUWZ-e/funny/FUNNYLITTLEMAZE_FORK.js"
+        "https://file.garden/ZBykMtEMpVTUWZ-e/funny/FUNNYLITTLEMAZE_FORK.js",
         ["https://cantharus.nekoweb.org/dump/nospookies.js", ()=>{return check('setting_nuhuh')}]
     ])
 
@@ -81,7 +81,7 @@ switch(page.path) {
 
     case "/local/ozo/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js",
-        "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js"
+        "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js",
         ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/no_spin.js", ()=>{return check('setting_nospin')}]]); break;
 }
 
@@ -130,7 +130,7 @@ document.addEventListener('corru_loaded', ()=>{
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
     
         case "/local/ocean/ship/interview/": addResources([
-            "https://file.garden/ZBykMtEMpVTUWZ-e/funny/FUNNYLITTLEMAZE_FORK.js"
+            "https://file.garden/ZBykMtEMpVTUWZ-e/funny/FUNNYLITTLEMAZE_FORK.js",
             ["https://cantharus.nekoweb.org/dump/nospookies.js", ()=>{return check('setting_nuhuh')}]
         ])
     
@@ -153,7 +153,7 @@ document.addEventListener('corru_loaded', ()=>{
     
         case "/local/ozo/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js",
-            "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js"
+            "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js",
             ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/no_spin.js", ()=>{return check('setting_nospin')}]]); break;
     }
     

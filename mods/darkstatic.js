@@ -14,7 +14,7 @@ var css = `
     background-image: url('/img/textures/badstatic.gif') !important;
 }
 
-.bg::after {
+#content[page='localhost'] .bg::after {
     background-image: url('/img/textures/badstatic.gif') !important;
 }
 

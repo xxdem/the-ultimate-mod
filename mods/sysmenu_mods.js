@@ -15,7 +15,7 @@ var syshtml = `
     <summary>Mod Options</summary>
     <div class="systoggles">
         <div class="sysbox">
-            <h3>Flashing</h3>
+            <h3>Darkstatic</h3>
             <p class="sysinfo">Darkens bouts of neural static when navigating between internal thoughtspaces.</p>
             <div class="buttons">
                 <span onclick="javascript:setFlashing(true)" class="button flashing_on">On</span>
@@ -25,7 +25,7 @@ var syshtml = `
 
         <div class="sysbox">
             <h3>Harder Mode</h3>
-            <p class="sysinfo">Doubles enemy count in BSTRD-ized combative memory streams.</p>
+            <p class="sysinfo">Doubles enemy count in combative memory streams.</p>
             <div class="buttons">
                 <span onclick="javascript:setDoubledEnemies(true)" class="button double_on">On</span>
                 <span onclick="javascript:setDoubledEnemies(false)" class="button double_off">Off</span>
