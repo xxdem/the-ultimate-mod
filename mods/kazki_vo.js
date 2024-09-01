@@ -646,7 +646,7 @@ env.dialogueActors["bozko"] = {
 function playVoice(line) {
     if(kazkivoicemap.playing() || line == 'stop')
         kazkivoicemap.stop()
-    else
+    else if(bozkokazkivoicemap.playing() || line == 'stop')
         bozkokazkivoicemap.stop()
 
     if(Object.keys(kazkivoicemap._sprite).includes(line))

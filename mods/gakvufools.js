@@ -18,16 +18,7 @@ document.head.appendChild(document.createElement('style').appendChild(document.c
 
 
 // DIALOGUE
-env.dialogues["d1_gakvuresp"] = generateDialogueObject(`
-RESPOBJ::
-    RESPONSES::akizet
-        false environment?<+>false
-        the complaint...<+>complaint
-        your coat<+>coat
-            SHOWIF::'gakpause'
-        fare well for now<+>END
-            EXEC::pauseSwapCam(false);vn.done()
-`)
+
 env.dialogues["d1_gakvu"]=generateDialogueObject(` 
 start
     sourceless

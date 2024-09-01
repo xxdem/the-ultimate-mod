@@ -40,4 +40,4 @@ start
 END::flash(true);setTimeout(()=>{content.classList.remove('ep0-epi');;flash(false)}, 1000)
 `)
 
-if(!check('fbx__gakvu_recovery') && !check('gakvu_fooled')) startDialogue('gakvu_recovery')
+if(!check('fbx__gakvu_recovery') && check('gakvu_fooled')) startDialogue('gakvu_recovery')

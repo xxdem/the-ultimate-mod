@@ -10,12 +10,6 @@ document.head.appendChild(document.createElement('style').appendChild(document.c
 
 
 // HTML INJECTION
-    // gets rid of the menu return button and gad temporarily
-let menureturnholder = body.querySelector('#system-menu .menureturn')
-let gadholder = body.querySelector('#system-menu .mindsci-status')
-
-body.querySelectorAll('#system-menu .menureturn, .mindsci-status').forEach((el)=>{el.remove()})
-
 var syshtml = `
 <details class="sysblock center" id="mod-select">
     <summary>Mod Options</summary>
@@ -96,12 +90,24 @@ var syshtml = `
 `
 
 if(!body.querySelector('#system-menu').innerHTML.includes("<details class=\"sysblock center\" id=\"mod-select\">")) {
-    body.querySelector('#system-menu').insertAdjacentHTML('afterbegin', syshtml)
-}
+        // gets rid of the menu return button and gad temporarily
+    let menureturnholder = body.querySelector('#system-menu .menureturn')
+    let gadholder = body.querySelector('#system-menu .mindsci-status')
+    
+    body.querySelectorAll('#system-menu .menureturn, .mindsci-status').forEach((el)=>{el.remove()})
 
-    // the return button and gad returns
-body.querySelector('#system-menu').insertAdjacentElement('afterbegin', menureturnholder)
-body.querySelector('#system-menu').insertAdjacentElement('afterbegin', gadholder)
+    body.querySelector('#system-menu').insertAdjacentHTML('afterbegin', syshtml)
+
+        // the return button and gad returns
+    body.querySelector('#system-menu').insertAdjacentElement('afterbegin', menureturnholder)
+    body.querySelector('#system-menu').insertAdjacentElement('afterbegin', gadholder)
+
+        // run this again to add menu sounds
+    document.querySelectorAll(`#mindspike-act, #mindspike-examine, #mindspike-back, #mui-links > *, #meta-icon, .menureturn, #meta-menu .moth-trigger, #system-menu summary, #system-menu .button`).forEach(e=>{
+        e.addEventListener('mouseenter', ()=>play('muiHover'))
+        e.addEventListener('click', ()=> play('muiClick'))
+    })
+}
 
 
 // FUNCTIONS

@@ -103,7 +103,7 @@ document.addEventListener('corru_loaded', ()=>{
     switch(page.path) {
         case "/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/dialoguetelephone/telephone_start.js",
-            "https://file.garden/ZBykMtEMpVTUWZ-e/gakvufools_basement.js"]); break;
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakvufools_basement.js"]); break;
     
         case "/hello/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/dialoguetelephone/telephone_hello.js"]); break;
@@ -118,8 +118,8 @@ document.addEventListener('corru_loaded', ()=>{
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/cerveza_cristal.js",
-            "https://file.garden/ZBykMtEMpVTUWZ-e/kazki_vo.js",
-            "https://file.garden/ZBykMtEMpVTUWZ-e/gakvufools.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/kazki_vo.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakvufools.js",
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
     
         case "/local/ocean/ship/interview/": addResources([
