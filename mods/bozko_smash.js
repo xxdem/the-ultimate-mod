@@ -17,6 +17,8 @@ content.insertAdjacentHTML('beforeend', `<style>
     width: 66.5px;
     height: 225px;
     transform: translateX(20px) translateY(-100px);
+    border-radius: unset;
+    box-shadow: unset;
 }
 
 #fp-player .fp-golem .fist.right {
@@ -25,6 +27,8 @@ content.insertAdjacentHTML('beforeend', `<style>
     width: 66.5px;
     height: 225px;
     transform: translateX(-20px) translateY(-100px);
+    border-radius: unset;
+    box-shadow: unset;
 }
 
 #fp-player .fp-golem::after {
@@ -618,7 +622,7 @@ ____END
     
     sourceless
         bozko?!
-        bozko shoves past garik and itzil
+        he shoves past karik and itzil
         pushing them aside, he incidentally shove them into the dull pillar
             EXEC::env.ACTIONS['dull_pillard'].exec(null, env.rpg.allyTeam.members.find(({slug}) => slug == 'ikgolem'))
         i can see in how the foundation golem hovers - it is--
@@ -752,9 +756,9 @@ start
             EXEC::env.stages['g_boss'].hideBoss();
         they fall away, unable to endure any more damage - and it is finally without defense
         bozko rears the great shell of their body into the construct
-        unable to block any more, the constructor's head is skewered
+        unable to block any more, the constructor's head is smashed
             EXEC::page.melee.fakeAttack()
-        whatever intelligence it had is pierced, causing the rest of its body to fall limp,
+        whatever intelligence it had is crushed, causing the rest of its body to fall limp,
         the impact enough to briefly tilt the chamber
         i nearly celebrate, but watch on as bozko slam their head into the ground,
             EXEC::page.melee.fakeAttack()
@@ -769,10 +773,16 @@ start
     bozko
         BOZKO SMASH
             EXEC::page.melee.fakeAttack()
+            WAIT::1500
+            AUTOADVANCE::
         BOZKO SMASH
             EXEC::page.melee.fakeAttack()
+            WAIT::1500
+            AUTOADVANCE::
         BOZKO SMASH
             EXEC::page.melee.fakeAttack()
+            WAIT::1500
+            AUTOADVANCE::
     
     akizet
         bozko!!
@@ -782,7 +792,7 @@ start
             EXEC::page.melee.fakeAttack()
     
     sourceless
-        the noise does not stop until there is nothing left for him to hold
+        the noise does not stop until there is nothing left for him to slam into
             EXEC::page.melee.fakeAttack()
 
     RESPONSES::akizet
@@ -793,6 +803,331 @@ start
 END::cutscene(false);startDialogue('bossclear')
 `)
 
+env.dialogues["bossclear"] = generateDialogueObject(`
+start
+____SHOWIF::'gameplay_off'
+    sys
+        ATTENTION::"thoughtform combat gameplay bypassed";'toggle within system menu if desired'
+____END
+
+    sourceless
+        then... silence
+            EXEC::toggleBgm(env.embassy.music_golems_cleared);env.embassy.music_unsafe_golems.rate(1);env.stages['g_boss'].hideBoss();
+        indeed, this is victory, but...
+            EXEC::change("PAGE!!golboss", true)
+        shared between all of us, the connection feels little joy
+        for the storm has not yet passed
+    
+    akizet
+        ...all clear!
+    
+    sourceless
+        soon we are all assembled in this final room
+        tozik waves gakvu over near the far wall,
+            EXEC::vnp({tozik: "show downleft", gakvu:"show downright"});
+        both giving our sludged conjoined friends some space
+        i do not truly know itzil or their kivii, yet...
+        i understand what must be going on in their mindcore
+    
+    tozik
+        where is it?
+    
+    sourceless
+        gakvu focuses, squinting at sludgy wall component covers
+        then, she points with one of her receptors at one near the far end
+    
+    gakvu
+        cut through here, and we will have our extra connectors!
+            EXEC::specialCam('g_postboss')
+    
+    tozik
+        on it
+    
+    sourceless
+        he exposes his corruskivi, preparing to cut through the wall
+        but then it occurs to him how large a task this truly is
+        that is a big cover...
+    
+    tozik
+        itzil, karik?
+        can you remove this for me?
+    
+    sourceless
+        our attention shifts to their shared golem
+            EXEC::vnp({tozik: "hide", gakvu:"hide", ikgolem: "show far", bg: true})
+        they are still on the floor, doubled over near the dull pillar...
+        but then they rise, floating over to the panel--
+            EXEC::vnp({tozik: "hide", gakvu:"hide", ikgolem: "show", bg: true})
+            WAIT::250
+            AUTOADVANCE::
+
+    bozko
+        BOZKO SMASH
+
+    sourceless
+        bozko shoves them off to the side again.. this time the shared body collapsing onto the floor 
+            EXEC::vnp({ikgolem: "hide", bozko: "show" bg: true})
+    
+    sourceless quiet
+        BOZKO... RIP!!
+            EXEC::vn.fadeChars(true);vnp({bg: false});play('crit', 0.75)
+    
+    sourceless
+        bozko digs his claws into the sides of the wall, tearing the panel away
+            EXEC::vnp({tozik: "show downleft", gakvu:"show downright", bozko: "hide"});env.stages['g_boss'].removeHatch()
+        of course, it is so damaged that once he pull it away, it simply melts in his claws...
+            EXEC::vn.fadeChars(false);
+    
+    tozik
+        ah... thank you
+        let me see...
+    
+    sourceless
+        tozik pulls a wired connector from the wall, placing it upon his receptor
+        he taps at the face of the little assistant display
+
+    tozik
+        yes, we can use this - still functional
+        it was in a hibernative state, so... only a little incoherence
+        just like geli...
+        anyway, we can make enough connectors for everyone
+        then--after that, we can descend further to the groundsmind
+        just like we planned, right?
+    
+    sourceless
+        he looks between us
+        i still feel confident that we are making the right decision, but..
+        this feels larger than the groundsmind...
+        what if it does not actually stop this madness?
+        still - i gesture my receptors affirmatively at him, dipping my head confidently
+
+    tozik
+        all right
+        give me some time
+        cavik, stand by - i will need your help
+    
+    cavik
+        will do!!
+    
+    sys
+        ATTENTION::'memory stream corrupt';'unable to access further events'
+        NOTE::'sufficient intact data';'coherent render can continue'
+        NOTE::'no further activity detected'
+    
+    moth
+        oh, interesting...
+        this one doesn't end in a hard crash
+        but it isn't incoherent, like the interview was...
+        so you can still look around some. nice
+        i'll keep an eye on activity, but it looks like a good time for a break
+        if i see any changes in these memories, i'll let you know
+        you can probably save the iteration again, but...
+        i don't think there's anything else to do yet
+
+    RESPONSES::sys
+        save and continue render<+>explore
+            EXEC::vn.done()
+            FAKEEND::(continue recollection)
+        save and end render<+>save
+            EXEC::vn.done()
+            FAKEEND::(end recollection)
+        end render without saving<+>END
+            EXEC::vn.done();moveTo("/local/ocean/embassy")
+            FAKEEND::(end recollection)
+
+explore
+    sys
+        ATTENTION::'saving iteration...'
+        ...
+            EXEC::env.embassy.collapseSave({effects: true})
+            WAIT::1000
+        NOTE::'save process complete'
+        NOTE::'return to entity tozik once stream repair is complete'
+
+    RESPONSES::self
+        ok<+>END
+            EXEC::pauseSwapCam(false);specialCam(false)
+
+save
+    sys
+        ATTENTION::'saving iteration...'
+        ...
+            EXEC::env.embassy.collapseSave({effects: true})
+            WAIT::1000
+        NOTE::'save process complete'
+        ATTENTION::'terminating render'
+
+    RESPONSES::self
+        ok<+>END
+            EXEC::moveTo("/local/ocean/embassy/")
+`)
+
 
 // DEBUG
 // startDialogue('boss_half')
+
+
+    // scrapped
+    // this was gonna be a whole bit but like i figured nah not enough time + boring and repetitive strain injury
+    /*
+env.dialogues["bozko"] = generateDialogueObject(`
+loop
+    RESPOBJ::bozko_resp
+
+start
+    sourceless
+        bozko hovers with all the flat expression of a golem
+            EXEC::vnp({hideStage: true, bozko: "show focus"})
+        something is so wrong... he is not himself
+            SHOWIF::['PAGE!!boztalk', false]
+        i have never seen self-alteration myself before, but this feels like it
+            SHOWIF::['PAGE!!boztalk', false]
+        i wish there was more i could do for him...
+            SHOWIF::'PAGE!!boztalk'
+        he notices my staring, and stares back
+    
+    RESPOBJ::bozko_resp
+
+survival
+    akizet
+        bozko!
+            EXEC::change("PAGE!!boztalk", true)
+        how have you been able to make it down here?
+            WAIT::250
+            AUTOADVANCE::
+
+    bozko
+        bozko smash
+
+    akizet
+        even with the timestopper, we...
+        makes sense
+    
+    sourceless
+        i see some sparse expression in his receptors
+        a backwards pull, maybe some twist - he does not want to talk about it
+        but i have to talk to him about something
+        he is not well
+        and it is like the tir say--reality withdrawal is the only sure path to final death
+        well, it was...
+        oh! he lifts his floating arms
+        the twist in his receptors grows more severe as he eyes a gauntlet
+    
+    bozko
+        bozko smash... bozko bozko smash bozko
+        ...bozko bozko bozko smash smash
+        bozko SMASH
+        
+    sourceless
+        is it that simple? no...
+        there is something else
+        he fights like an automaton, with such practice
+        i saw it when he saved cavik - the speed with which he helped...
+        it was beyond natural
+    
+    akizet
+        but--
+    
+    bozko
+        bozko bozko
+        bozko smash bozko bozko
+        bozko smash, smash...
+        smash smash, bozko, smash
+        smash, smash bozko bozko
+        bozko smash <em>bozko</em> bozko smash, smash...
+    
+    sourceless
+        he clutches his face, growing silent
+    
+    akizet
+        bozko, you--you do not have to--
+    
+    bozko
+        bozko smash, bozko bozko
+        bozko...
+        bozko bozko
+        bozko smash smash, smash smash smash
+        bozko smash smash bozko smash
+        bozko... bozko smash
+        smash bozko, bozko smash... bozko smash,
+        smash bozko bozko bozko
+        bozko smash, smash bozko...
+    
+    sourceless
+        the twist in his receptors becomes undone, 
+        and in his voice is the sole strong expression i have heard from him this gaze
+        it is anger--spite, maybe disgust
+    
+    bozko
+        bozko's bozko bo bozko bozko bo bozko bozko smash
+
+    RESPONSES::akizet
+        ...<+>loop
+            FAKEEND::(back)
+
+notalone
+    akizet
+        bozko...
+        you are not alone in this
+        do not try to rewrite yourself just for our sakes
+        we have made it this far--and together, we will finish this
+        
+    bozko
+        yes...
+        i understand the strength of the timestopper
+        but akizet, i cannot let anyone else meet their final deaths
+        not even a chance can remain
+        i will do whatever it takes to get us all out
+        the aftermath, whatever happens to me... does not matter
+    
+    akizet
+        yes it does!!
+        
+    sourceless
+        ah--i must be careful of my tone...
+        he hovers now over a razor's edge
+        a spiral of self modification, or a spiral of memory re-integration
+        it is only the balance he has managed so far that has saved him
+        bozko...
+    
+    akizet
+        just let us share the burden
+        if you want to help us escape, we must truly work together
+        and that means you must be well
+        please, just be careful
+    
+    bozko
+        i will, akizet
+
+    RESPONSES::akizet
+        ...<+>loop
+            FAKEEND::(back)
+
+theory
+    sourceless
+        with the state he is in
+        is it inappropriate to ask him his thoughts?
+        the more i can speak with him, the more i can reach him, so...
+        i will try it!
+    
+    akizet
+        bozko!
+        what do you think is happening? the cause of all this...
+        we have discussed it a little, but
+    
+    sourceless
+        i find myself trailing off as he prepares to respond
+        in his stance, his gaze, his receptors
+        all at once comes a crushing darkness
+        
+    bozko
+        i cannot begin to speculate how
+        but it is an infestation, spreading outwards...
+        since even golems cut off from the network were hostile
+        so the source must be destroyed--the groundsmindry
+        and i will ensure that whoever has orchestrated this does not escape
+
+    RESPONSES::akizet
+        we will, bozko<+>loop
+            FAKEEND::(back)
+`) */
