@@ -122,12 +122,12 @@ if(!body.querySelector('#system-menu').innerHTML.includes("<details class=\"sysb
 // FUNCTIONS
 function setFlashing(pref) {
     if (pref) {
-        chatter({actor: 'sys', text: "ATTENTION::'bright flashes on';'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'bright flashes reduced';'refresh to apply'", readout: true})
         document.querySelector('.flashing_on').classList.add('glow')
         document.querySelector('.flashing_off').classList.remove('glow')
     }
     else {
-        chatter({actor: 'sys', text: "ATTENTION::'bright flashes off';'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'bright flashes on';'refresh to apply'", readout: true})
         document.querySelector('.flashing_on').classList.remove('glow')
         document.querySelector('.flashing_off').classList.add('glow')
     }
@@ -137,12 +137,12 @@ function setFlashing(pref) {
 
 function setDoubledEnemies(pref) {
     if (pref) {
-        chatter({actor: 'sys', text: "ATTENTION::'hard mode enemy count set to doubled';'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'enemy count set to doubled';'refresh to apply'", readout: true})
         document.querySelector('.double_on').classList.add('glow')
         document.querySelector('.double_off').classList.remove('glow')
     }
     else {
-        chatter({actor: 'sys', text: "ATTENTION::'hard mode enemy count set to default';'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'enemy count set to default';'refresh to apply'", readout: true})
         document.querySelector('.double_on').classList.remove('glow')
         document.querySelector('.double_off').classList.add('glow')
     }
@@ -212,12 +212,12 @@ function setNormalMoth(pref) {
 
 function setNoSpin(pref) {
     if (pref) {
-        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'preference set';'refresh to apply'", readout: true})
         document.querySelector('.nospin_on').classList.add('glow')
         document.querySelector('.nospin_off').classList.remove('glow')
     }
     else {
-        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'preference set';'refresh to apply'", readout: true})
         document.querySelector('.nospin_on').classList.remove('glow')
         document.querySelector('.nospin_off').classList.add('glow')
     }
@@ -227,12 +227,12 @@ function setNoSpin(pref) {
 
 function setExpanded(pref) {
     if (pref) {
-        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'preference set';'refresh to apply'", readout: true})
         document.querySelector('.expandedent_on').classList.add('glow')
         document.querySelector('.expandedent_off').classList.remove('glow')
     }
     else {
-        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'preference set';'refresh to apply'", readout: true})
         document.querySelector('.expandedent_on').classList.remove('glow')
         document.querySelector('.expandedent_off').classList.add('glow')
     }
@@ -247,7 +247,7 @@ function setCorruObserver(pref) {
         document.querySelector('.corruobserver_off').classList.remove('glow')
     }
     else {
-        chatter({actor: 'sys', text: "ATTENTION::'annoyance enabled';'refresh to apply'", readout: true})
+        chatter({actor: 'sys', text: "ATTENTION::'annoyance disabled';'refresh to apply'", readout: true})
         document.querySelector('.corruobserver_on').classList.remove('glow')
         document.querySelector('.corruobserver_off').classList.add('glow')
     }

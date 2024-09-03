@@ -35,3 +35,15 @@ body[quality="low"] #content .gakvu {
 .focusplane:not([focus]) .head, .focusplane:not([focus]) .head::after {
     --rotation: rotateX(0deg);
 }
+
+.focus.day3 .head.gakvu-focus {
+    background-image: url(https://pocl.vip/corru/bettergak/gak.gif);
+    background-size: auto 350%;
+    background-position: -400% -8%;
+    --rotation: rotateX(-90deg);
+    transform: translate(0%, 50%) var(--rotation);
+}
+
+.collapse #realgrid .truecreature .gakvu .head {
+    background-image: url(https://pocl.vip/corru/bettergak/gak.gif);
+}

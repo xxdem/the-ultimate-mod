@@ -19,7 +19,7 @@ start
         WITH THE OTHER, SHE GIVES ME A KIND GREETING
             EXEC::vnp({hideStage: true, kazki: "show"})
     
-    kazki
+    kazki silent
         hii akizet!
             EXEC::playVoice('start1')
     
@@ -29,7 +29,7 @@ start
         this is a surprise--i do not often see you linger in this segment
         what brings you here?
     
-    kazki
+    kazki silent
         ohh, i am waiting for the crew!
             EXEC::playVoice('start2')
         they are having their little expedition, 
@@ -50,7 +50,7 @@ creature
         how is the little creature faring?
             EXEC::kazkivoicemap.stop()
 
-    kazki
+    kazki silent
         it is alive!!
             EXEC::playVoice('creature1')
         it does not move very much... but it reacts very quickly to my prodding!
@@ -62,7 +62,7 @@ creature
         SHE WAGS THE COMMUNICATOR-BEARING RECEPTOR SLIGHTLY
             EXEC::kazkivoicemap.stop()
 
-    kazki
+    kazki silent
         and she says it is a 'arthropod'!
             EXEC::playVoice('creature4')
         so--i thought, i will call it 'arthur'!
@@ -89,7 +89,7 @@ creature
         the silent veil has long been drawn
         but--how are you communicating? 
     
-    kazki
+    kazki silent
         oh!!
             EXEC::playVoice('creature7')
         you have not heard?
@@ -116,7 +116,7 @@ creature
     akizet
         and you are using it to speak with a bright cousin?
     
-    kazki
+    kazki silent
         yes!!
             EXEC::playVoice('creature15')
         is that not remarkable?? it is COOL!!!
@@ -137,7 +137,7 @@ cyst
     akizet
         kazki, did you have a cyst delivered to my room recently?
     
-    kazki
+    kazki silent
         huh? no!
             EXEC::playVoice('cyst1')
 
@@ -145,7 +145,7 @@ cyst
         NOTHING... IT IS NOT HER
             EXEC::kazkivoicemap.stop()
 
-    kazki
+    kazki silent
         i have been so busy coordinating all of this!
             EXEC::playVoice('cyst2')
         but i do have a few cysts i need to return to you...
@@ -157,7 +157,7 @@ cyst
         ah, it was nothing of note, a mundane collection of memories
             EXEC::kazkivoicemap.stop()
         
-    kazki
+    kazki silent
         i can ask around for you!
             EXEC::playVoice('cyst5')
     
@@ -177,7 +177,7 @@ cyst
         ah--no, no no
         no no, it is all right
     
-    kazki
+    kazki silent
         are you sure??
             EXEC::playVoice('cyst6')
         i have my communicator on right now, i could help!
@@ -188,7 +188,7 @@ cyst
             EXEC::kazkivoicemap.stop()
         SHE SMILES LIKE A BRIGHT COUSIN WOULD, HER RECEPTORS TAKING ON A TEASING POSTURE
 
-    kazki
+    kazki silent
         oh, i think i get it
             EXEC::playVoice('cyst8')
         it was one of <em>those</em> cysts
@@ -198,7 +198,7 @@ cyst
         no!! no no no
             EXEC::kazkivoicemap.stop()
 
-    kazki
+    kazki silent
         uh-huh!!
             EXEC::playVoice('cyst10')
 
@@ -216,7 +216,7 @@ cyst
         ok, it was,
         but please do not tell anyone
         
-    kazki
+    kazki silent
         do not worry!!
             EXEC::playVoice('cyst11')
         it is between us and the arthropod!
@@ -229,7 +229,7 @@ bye
         bye kazki!
             EXEC::kazkivoicemap.stop()
 
-    kazki
+    kazki silent
         bye!!
             EXEC::playVoice('bye')
     
@@ -260,17 +260,17 @@ start
         HIS FOCUS LAY MOSTLY UPON THE <span definition="NOTE::'partial translation';'implied closest functional equivalent';'technological implication'">WINDOW</span>, OBSERVING THE COUSINS' RESEARCH VESSEL
         HER TALE BECOMES MORE DISTINCT AS I APPROACH
     
-    kazki
+    kazki silent
         ... so i said, it is because my larval form was <span definition="ERROR::TRANSLATION_FAILED:'no equivalent internal meaning';'no relevant inherited context'::ROMANIZATION SUCCESSFUL">tir</span>! and i told him of the function that entails...
             EXEC::playVoice('start1kazki')
         i even talked a little about that story from the kozazni excavation--you know the one, ah, when i was first starting work there
             EXEC::playVoice('start2kazki')
     
-    bozko
+    bozko silent
         oh, no
             EXEC::playVoice('start1bozko')
 
-    kazki
+    kazki silent
         and while i was saying these things, my funfriend was attempting to warn me about something, but i kept talking...
             EXEC::playVoice('start3kazki')
         and then when i was done, i checked to see what it was, and it was telling me to stop! 
@@ -287,11 +287,11 @@ start
         WITH ANOTHER LITTLE RECEPTOR GESTURE, KAZKI TURNS TO FACE ME AS WELL, DELIGHTED
             EXEC::specialCam('kazkibozko');vnp({bg: true, kazki: "show", bozko: "show"})
 
-    bozko
+    bozko silent
         hello, akizet
             EXEC::playVoice('start2bozko')
 
-    kazki
+    kazki silent
         hi akizet!!
             EXEC::playVoice('start7kazki')
     
@@ -312,7 +312,7 @@ story
     sourceless
         HER BRANCHED RECEPTORS FAN OUTWARDS EXCITEDLY
 
-    kazki
+    kazki silent
         ah! i was in the nation of australia recently! 
             EXEC::playVoice('story1kazki')
         for the polygonation spire meeting, you see
@@ -326,7 +326,7 @@ story
         which!! by the way! the construction was approved!
             EXEC::playVoice('story6kazki')
     
-    bozko
+    bozko silent
         through some giggle of velzie, it occurred to her to share the events of her early larval work
             EXEC::playVoice('story1bozko')
     
@@ -335,7 +335,7 @@ story
             EXEC::bozkokazkivoicemap.stop()
         OF COURSE A CLUELESS BRIGHT COUSIN WOULD FEAR FOR THEIR LIFE AFTER HEARING THAT
 
-    kazki
+    kazki silent
         it was in good nature! he found it funny after i explained away his fears!
             EXEC::playVoice('story7kazki')
     
@@ -356,7 +356,7 @@ talk
     sourceless
         BOZKO PEERS INTO THE ESTIMATION OF THE <span definition="NOTE::'partial translation';'implied closest functional equivalent';'technological implication'">WINDOW</span>
     
-    bozko
+    bozko silent
         outside of our works,
             EXEC::playVoice('talk1bozko')
         i have been observing the creatures of the water nearby
@@ -378,7 +378,7 @@ talk
     akizet
         remarkable
 
-    bozko
+    bozko silent
         and i am not the sole observer of the bright world's creatures among us
             EXEC::playVoice('talk5bozko')
     
@@ -389,15 +389,15 @@ talk
             EXEC::content.classList.remove('fishies');vnp({fade: false})
         HE GESTURES TOWARDS KAZKI TEASINGLY AFTER A MOMENT'S SILENCE
 
-    kazki
+    kazki silent
         bozko!
             EXEC::playVoice('talk1kazki')
     
-    bozko
+    bozko silent
         although, she is taking a more live approach
             EXEC::playVoice('talk6bozko')
 
-    kazki
+    kazki silent
         bozko!!
             EXEC::playVoice('talk2kazki')
 
@@ -405,7 +405,7 @@ talk
         HER RECEPTORS CURL INTO THEMSELVES, LIKE BALLED FISTS
             EXEC::bozkokazkivoicemap.stop()
 
-    kazki
+    kazki silent
         fine, fine!
             EXEC::vnp({kazki: "focus"}); playVoice('talk3kazki')
         it is an experiment i am doing, akizet
@@ -426,7 +426,7 @@ talk
             EXEC::bozkokazkivoicemap.stop()
         IT IS LIKE SHE EXPECTS ME TO SAY SHE SHOULD PUT IT BACK
 
-    bozko
+    bozko silent
         so she made a cavity in her head
             EXEC::vnp({kazki: "defocus"}); playVoice('talk7bozko')
     
@@ -434,7 +434,7 @@ talk
         what? are you--?
             EXEC::bozkokazkivoicemap.stop()
 
-    kazki
+    kazki silent
         i am getting to that!!
             EXEC::vnp({kazki: "focus"}); playVoice('talk10kazki')
         so... i went to pick it up, but it leaped into my hand!
@@ -453,7 +453,7 @@ talk
             EXEC::bozkokazkivoicemap.stop()
         and are keeping it in an air pocket?
 
-    kazki
+    kazki silent
         exactly!! do you want to see it???
             EXEC::playVoice('talk16kazki')
     
@@ -493,7 +493,7 @@ arthur
         KAZKI REPLACES HER FACIAL FEATURES, PULLING HER HEAD BACK
             EXEC::specialCam('kazkibozko');content.classList.remove('kazkihead')
     
-    kazki
+    kazki silent
         such life in its little eyes!
             EXEC::content.classList.remove('spider');vnp({kazki: "defocus"}); playVoice('arthur1kazki')
 
@@ -507,7 +507,7 @@ focus
     sourceless
         THEY BOTH DIP THEIR RECEPTORS AFFIRMATIVELY
 
-    kazki
+    kazki silent
         yes!
             EXEC::playVoice('focus1kazki')
     
@@ -516,7 +516,7 @@ focus
             EXEC::bozkokazkivoicemap.stop()
         i arranged for the <span definition="NOTE::'partial translation';'inherited description-generated noun'">time-stopper</span> to be used this time, so it will be quick
     
-    bozko
+    bozko silent
         excellent
             EXEC::playVoice('focus1bozko')
         we will be there shortly, you go ahead
@@ -629,13 +629,13 @@ var bozkokazkivoicemap = new Howl({
 
 // DIALOGUE ACTOR
     // modified to be voiceless
-env.dialogueActors["kazki"] = {
+env.dialogueActors["kazki silent"] = {
     image: "/img/sprites/obesk/kazki/portrait.gif",
     type: "obesk qou kazki",
     voice: false
 }
 
-env.dialogueActors["bozko"] = {
+env.dialogueActors["bozko silent"] = {
     image: "/img/sprites/obesk/bozko/portrait.gif",
     type: "obesk qou bozko",
     voice: false
