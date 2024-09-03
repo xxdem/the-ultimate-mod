@@ -6,6 +6,8 @@ BY : sawlf (@sawlferton on discord)
 
 MODIFIED BY : max :ᶅ (@the_dem on discord)
 
+// !!!!! NOTE :: 'deprecated component' ; 'supersceded by updated official version from original author' !!!!! //
+
 */
 
 

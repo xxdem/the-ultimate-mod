@@ -866,7 +866,7 @@ ____END
 
     sourceless
         bozko shoves them off to the side again.. this time the shared body collapsing onto the floor 
-            EXEC::vnp({ikgolem: "hide", bozko: "show" bg: true})
+            EXEC::vnp({ikgolem: "hide", bozko: "show", bg: true})
     
     sourceless quiet
         BOZKO... RIP!!

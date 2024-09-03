@@ -18,12 +18,14 @@ CREDITS:
         BY: cyril (@cantharus on discord)
     BetterNAV
         BY: overcast system (@overcastwarmth on discord)
-    normal moth, bitch!
+    normal moth, normalist, bitch!
         BY: sawlf (@sawlferton on discord)
     bad apple on gakvu's poncho
         BY: garlic (@garlic_os on discord)
     bozko smash
         BY: shaman (@shaseng on discord)
+    ozoparty
+        BY: newmoonwastaken (@newmoonwastaken on discord)
     darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny
         BY: max/dem (@the_dem on discord)
 
@@ -61,6 +63,7 @@ switch(page.path) {
     case "/local/ocean/embassy/golem/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+        ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty.js", ()=>{ check('e3a2__escapewin') && check("citystreet__flower_beacon") }],
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
 
     case "/local/beneath/embassy/":addResources([
@@ -85,7 +88,8 @@ addResources([
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
     ["https://file.garden/ZfLavVA4xzfd-zhM/quiet_masks.js", ()=>{return check('setting_silentmasks')}],
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js",
-    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/normal_moth.js",
+    "https://file.garden/ZkyoNoBsKjjFvjMv/normal_moth.js",
+    "https://file.garden/ZkyoNoBsKjjFvjMv/normalest.js",
     ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
 ])
 
@@ -128,6 +132,7 @@ document.addEventListener('corru_loaded', ()=>{
         case "/local/ocean/embassy/golem/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+            ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty.js", ()=>{ check('e3a2__escapewin') && check("citystreet__flower_beacon") }],
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
     
         case "/local/beneath/embassy/":addResources([
@@ -152,7 +157,8 @@ document.addEventListener('corru_loaded', ()=>{
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/random_velzie.js",
         ["https://file.garden/ZfLavVA4xzfd-zhM/quiet_masks.js", ()=>{return check('setting_silentmasks')}],
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js",
-        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/normal_moth.js",
+        "https://file.garden/ZkyoNoBsKjjFvjMv/normal_moth.js",
+        "https://file.garden/ZkyoNoBsKjjFvjMv/normalest.js",
         ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
     ])
 })
