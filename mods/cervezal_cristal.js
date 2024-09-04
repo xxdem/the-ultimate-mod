@@ -106,6 +106,7 @@ createEntity({
             name: "sip-u-lacrum",
             exec: ()=>{  
                 content.classList.add('sipping')
+                cerveza_cristal_audio.play()
                 change('PAGE!!citrusip', "++")
                 chatter({actor: 'sourceless', text: 'THE SIMULACRUM STAYS THE SAME, BUT THE TASTE REGISTERS CLEARLY', readout: true})
                 setTimeout(()=>chatter({actor: 'sourceless', text: 'THE STRENGTH OF IT DISTORTS MY FEATURES AND SENDS MY RECEPTORS INTO A REFLEXIVE CURL', readout: true}), 3000)

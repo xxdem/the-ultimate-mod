@@ -21,6 +21,22 @@ var css = `
 .portal figure::after {
     background-image: url(/img/sprites/misc/sphereframewhite.gif) !important;
 }
+
+#static::before {
+    content: "";
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;
+    background: url(/img/sprites/velzie/smile2.png);
+    z-index: 5;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+	filter: invert();
+}
 `;
 
 document.head.appendChild(document.createElement('style').appendChild(document.createTextNode(css)).parentElement);
