@@ -63,7 +63,7 @@ switch(page.path) {
     case "/local/ocean/embassy/golem/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
-        ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }],
+        ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty-bozkosmash.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }],
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
 
     case "/local/beneath/embassy/":addResources([
@@ -132,7 +132,7 @@ document.addEventListener('corru_loaded', ()=>{
         case "/local/ocean/embassy/golem/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
-            ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }],
+            ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty-bozkosmash.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }],
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]]); break;
     
         case "/local/beneath/embassy/":addResources([
@@ -177,6 +177,7 @@ document.addEventListener('corru_entered', ()=>{
 
         case "/local/ocean/embassy/golem/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bozko_smash.js",
+            ["https://file.garden/ZpmqdRbyKSpKbO5L/ozoparty-bozkosmash.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }]
         ]); break;
     }
 })

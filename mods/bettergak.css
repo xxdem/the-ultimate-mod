@@ -37,10 +37,6 @@ body[quality="low"] #content .gakvu {
 }
 
 .focus.day3 .head.gakvu-focus {
-    background-image: url(https://pocl.vip/corru/bettergak/gak.gif);
-    background-size: auto 350%;
-    background-position: -400% -8%;
-    --rotation: rotateX(-90deg);
     transform: translate(0%, 50%) var(--rotation);
 }
 
