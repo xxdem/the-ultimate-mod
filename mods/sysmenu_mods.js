@@ -61,7 +61,7 @@ var syshtml = `
 
         <div class="sysbox">
             <h3>bitch</h3>
-            <p class="sysinfo">Makes moth a little more normal.</p>
+            <p class="sysinfo">Makes everyone a little more normal.</p>
             <div class="buttons">
                 <span onclick="javascript:setNormalMoth(true)" class="button normalmoth_on">On</span>
                 <span onclick="javascript:setNormalMoth(false)" class="button normalmoth_off">Off</span>
