@@ -3457,14 +3457,15 @@ ____END
 
     bozko
         BOZKO SMASH
+            EXEC::vnp({ikgolem: "hide", bozko: "show", bg: true}); setTimeout(()=>{play('crit')}, 200)
 
-    sourceless
-        bozko shoves them off to the side again.. this time the shared body collapsing onto the floor 
-            EXEC::vnp({ikgolem: "hide", bozko: "show", bg: true})
-    
     sourceless quiet
+        bozko shoves them off to the side again.. the shared body shoved into a dull pillar, collapsing onto the floor
+            EXEC::play('dull')
+    
+    bozko
         BOZKO... RIP!!
-            EXEC::vn.fadeChars(true);vnp({bg: false});play('crit', 0.75)
+            EXEC::vn.fadeChars(true);vnp({bg: false}); setTimeout(()=>{play('crit', 0.75)}, 100)
     
     sourceless
         bozko digs his claws into the sides of the wall, tearing the panel away

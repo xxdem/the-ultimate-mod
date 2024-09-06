@@ -1,3 +1,14 @@
+/*
+
+*****   COMPONENT OF :: 'the ultimate modpack'   *****
+MOD : 100% velzie's glee
+BY : dudemine (@dudemine on discord)
+
+MODIFIED BY : max :ᶅ (@the_dem on discord)
+
+*/
+
+
 env.STATUS_EFFECTS['light_glee'] = { 
     slug: "light_glee",
     name: "Velzie's Glee",

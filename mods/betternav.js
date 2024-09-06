@@ -16,6 +16,7 @@ env.dialogues["menu_hub"].start.responses[0].replies.splice(1, 0, {
     hideRead: true,
     showIf: ['visited_localozo'],
     exec: () => {
+        change("TEMP!!from", false)
         cutscene(true);
         corruRefresh("/local/ozo", 3000);
         if (env.e3a2) env.e3a2.clearWarningListener();

@@ -26,11 +26,31 @@ CREDITS:
         BY: shaman (@shaseng on discord)
     ozoparty
         BY: newmoonwastaken (@newmoonwastaken on discord)
+    A Bit More Than Koritz
+        BY: zyra
     darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny
         BY: max/dem (@the_dem on discord)
 
+    
+MORE MODS TO ADD:
+    a normal intro
+        BY: cyril
+    more humors, meme(pain)mode
+        BY: zyra
+    disco elysium reference, kill mask
+        BY: td
+    sidestep/strafing
+        BY: avidya
+    NETWORK
+        BY: octo
+    susie n kris, council's alternate dance
+        BY: max
+    akizet_fuckign_dies
+        BY: sparklefriend
+    catfriend
+        BY: oatmealine
 
-NOTICE :: 'total count at 31'
+NOTICE :: 'total count at 34'
 */
 
 
@@ -153,6 +173,8 @@ document.addEventListener('corru_loaded', ()=>{
         "https://file.garden/ZkyoNoBsKjjFvjMv/normalest.js",
         ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
     ])
+
+    document.addEventListener('corru_resources_added', addAdditionalResources, true)
 })
 
     // this is for the mods that wont run because the game loads too fast
@@ -160,16 +182,30 @@ document.addEventListener('corru_loaded', ()=>{
 document.addEventListener('corru_entered', ()=>{
         // page specific mods
     switch(page.path) {
+        case "/local/ocean/embassy/golem/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bozko_smash.js",
+            ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/ozoparty-bozkosmash.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }]
+        ]); break;
+
+        case "/local/beneath/embassy/": addResources([
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/koritz.js"
+        ]); break;
+    }
+})
+
+    // this event listener runs after all resources loaded so No Problems (for some)
+function addAdditionalResources() {
+        // immediately unhooks so it doesn't infinite loops
+    document.removeEventListener('corru_resources_added', addAdditionalResources, true)
+
+    console.log("ULTIMATE MODPACK : adding additional files")
+        // page specific mods
+    switch(page.path) {
         case "/local/ocean/embassy/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/cerveza_cristal.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/kazki_vo.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakvufools.js",
             ["https://file.garden/ZBykMtEMpVTUWZ-e/collapsefunny.js", ()=>{return check("fbx__ep2intro-end")}],
-        ]); break;
-
-        case "/local/ocean/embassy/golem/": addResources([
-            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bozko_smash.js",
-            ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/ozoparty-bozkosmash.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }]
         ]); break;
 
         case "/local/ozo/": addResources([
@@ -181,4 +217,6 @@ document.addEventListener('corru_entered', ()=>{
             "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.observer_final.js",
         ]); break;
     }
-})
+}
+
+document.addEventListener('corru_resources_added', addAdditionalResources, true)
