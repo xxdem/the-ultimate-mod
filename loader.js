@@ -28,7 +28,9 @@ CREDITS:
         BY: newmoonwastaken (@newmoonwastaken on discord)
     A Bit More Than Koritz
         BY: zyra
-    darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny
+    sidestep/strafing
+        BY: avidya
+    darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny, council's alternate dance
         BY: max/dem (@the_dem on discord)
 
     
@@ -39,18 +41,16 @@ MORE MODS TO ADD:
         BY: zyra
     disco elysium reference, kill mask
         BY: td
-    sidestep/strafing
-        BY: avidya
     NETWORK
         BY: octo
-    susie n kris, council's alternate dance
+    susie n kris
         BY: max
     akizet_fuckign_dies
         BY: sparklefriend
     catfriend
         BY: oatmealine
 
-NOTICE :: 'total count at 34'
+NOTICE :: 'total count at 37'
 */
 
 
@@ -198,7 +198,7 @@ function addAdditionalResources() {
         // immediately unhooks so it doesn't infinite loops
     document.removeEventListener('corru_resources_added', addAdditionalResources, true)
 
-    console.log("ULTIMATE MODPACK : adding additional files")
+    console.log("ULTIMATE MODPACK : adding additional files (if any)")
         // page specific mods
     switch(page.path) {
         case "/local/ocean/embassy/": addResources([
@@ -208,15 +208,24 @@ function addAdditionalResources() {
             ["https://file.garden/ZBykMtEMpVTUWZ-e/collapsefunny.js", ()=>{return check("fbx__ep2intro-end")}],
         ]); break;
 
+        case "/local/ocean/embassy/golem/": addResources([
+            ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/ozoparty_gmintro.js", ()=>{ return check('e3a2__escapewin') && check("citystreet__flower_beacon") }]
+        ]); break;
+
         case "/local/ozo/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/stowaway_unity.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.ozo.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/COUNCIL_DANCE.js"
         ]); break;
 
         case "/local/beneath/embassy/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/car.observer/ford.observer_final.js",
         ]); break;
     }
+
+    addResources([
+        ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/strafing.js", ()=>{return content.querySelector('#stage-navigator')}]
+    ])
 }
 
 document.addEventListener('corru_resources_added', addAdditionalResources, true)

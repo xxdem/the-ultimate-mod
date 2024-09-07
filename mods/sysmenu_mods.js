@@ -94,6 +94,15 @@ var syshtml = `
                 <span onclick="javascript:setCorruObserver(false)" class="button corruobserver_off">Off</span>
             </div>
         </div>
+
+        <div class="sysbox">
+            <h3>strafing rebind</h3>
+            <p class="sysinfo">Sets keys 'A' and 'D' to strafe by default. Turn with arrow keys.</p>
+            <div class="buttons">
+                <span onclick="javascript:setStrafing(true)" class="button strafe_on">On</span>
+                <span onclick="javascript:setStrafing(false)" class="button strafe_off">Off</span>
+            </div>
+        </div>
     </div>
 </details>
 `
@@ -255,6 +264,21 @@ function setCorruObserver(pref) {
     change('setting_corruobserver', pref)
 }
 
+function setStrafing(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'preference applied';'refresh to apply'", readout: true})
+        document.querySelector('.strafe_on').classList.add('glow')
+        document.querySelector('.strafe_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'preference applied';'refresh to apply'", readout: true})
+        document.querySelector('.strafe_on').classList.remove('glow')
+        document.querySelector('.strafe_off').classList.add('glow')
+    }
+
+    change('setting_altbindstrafe', pref)
+}
+
 
 // MOD LOAD
     // dark static
@@ -328,3 +352,11 @@ if (check('setting_corruobserver')) {
 else {
     document.querySelector('.corruobserver_on').classList.remove('glow')
     document.querySelector('.corruobserver_off').classList.add('glow')}
+
+    // alt strafing
+if (check('setting_altbindstrafe')) {
+    document.querySelector('.strafe_on').classList.add('glow')
+    document.querySelector('.strafe_off').classList.remove('glow')}
+else {
+    document.querySelector('.strafe_on').classList.remove('glow')
+    document.querySelector('.strafe_off').classList.add('glow')}
