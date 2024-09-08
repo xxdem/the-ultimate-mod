@@ -31,6 +31,10 @@ body.insertAdjacentHTML('beforeend', `<style>
 #ffproxy {
     --buddyimg: url(https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/catproxyfriend.gif) !important;
 }
+
+#eyefriend {
+    --buddyimg: url(https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/catproxyfriend.gif) !important;
+}
 </style>`)
 
 

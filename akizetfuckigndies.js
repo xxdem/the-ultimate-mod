@@ -69,16 +69,12 @@ env.stages['embassy_quarters'].entities['q'] = {
     border-style: outset;`*/
     exec: ()=>{
         if(check('PAGE!!akiroomunlocked', false)) {
-            cutscene(true)
+                // hard-forces you back heh
+            let homeBox = stageCoordinatesFromId('creature')
+            gridMoveTo(elementAtStageCoordinates(homeBox.x, homeBox.y), elementAtStageCoordinates(2, 2))
+            step()
 
-            setTimeout(()=>{
-                cutscene(false)
-                let homeBox = stageCoordinatesFromId('creature')
-                gridMoveTo(elementAtStageCoordinates(homeBox.x, homeBox.y), elementAtStageCoordinates(2, 2))
-                step()
-
-                chatter({actor: 'akizet', text: 'i should check the cyst first', readout: true})
-            }, 500)
+            chatter({actor: 'akizet', text: 'i should check the cyst first', readout: true})
         }
     }
 }
@@ -118,4 +114,4 @@ env.stages['embassy_personnel'].entities['a'].teleportSpot = 18
 
 
 // DEBUG
-changeStage('embassy_quarters')
+// changeStage('embassy_quarters')

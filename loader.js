@@ -73,7 +73,6 @@ switch(page.path) {
     case "/local/ocean/embassy/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
-        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/akizetfuckigndies.js",
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
 
     case "/local/ocean/ship/interview/": addResources([
@@ -115,7 +114,7 @@ addResources([
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js", ()=>{return check('setting_flashing')}],
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betternav.js",
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/expanded_ent.js", ()=>{return check('setting_expandedent')}],
-    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/corruobserving.js", ()=>{return check('setting_corruobserver')}]
+    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/corruobserving.js", ()=>{return check('setting_corruobserver')}],
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/catfriend.js", ()=>{return check('setting_catfriend')}]
 ])
 
@@ -140,7 +139,6 @@ document.addEventListener('corru_loaded', ()=>{
         case "/local/ocean/embassy/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
-            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/akizetfuckigndies.js",
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
     
         case "/local/ocean/ship/interview/": addResources([
@@ -208,6 +206,7 @@ function addAdditionalResources() {
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/cerveza_cristal.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/kazki_vo.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakvufools.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/akizetfuckigndies.js",
             ["https://file.garden/ZBykMtEMpVTUWZ-e/collapsefunny.js", ()=>{return check("fbx__ep2intro-end")}],
         ]); break;
 
