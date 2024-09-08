@@ -2517,7 +2517,7 @@ start
 
     bstigy
         ok!!
-        PLS MAKE GUNS INTERLOPR
+        PLS MAKE GUNS INTERLOPER
 
 ____SHOWIF::["PAGE!!augments", false]
     sys

@@ -103,6 +103,15 @@ var syshtml = `
                 <span onclick="javascript:setStrafing(false)" class="button strafe_off">Off</span>
             </div>
         </div>
+
+        <div class="sysbox">
+            <h3>catfriend</h3>
+            <p class="sysinfo">:3</p>
+            <div class="buttons">
+                <span onclick="javascript:setCatfriend(true)" class="button catfriend_on">On</span>
+                <span onclick="javascript:setCatfriend(false)" class="button catfriend_off">Off</span>
+            </div>
+        </div>
     </div>
 </details>
 `
@@ -279,6 +288,21 @@ function setStrafing(pref) {
     change('setting_altbindstrafe', pref)
 }
 
+function setCatfriend(pref) {
+    if (pref) {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.catfriend_on').classList.add('glow')
+        document.querySelector('.catfriend_off').classList.remove('glow')
+    }
+    else {
+        chatter({actor: 'sys', text: "ATTENTION::'refresh to apply'", readout: true})
+        document.querySelector('.catfriend_on').classList.remove('glow')
+        document.querySelector('.catfriend_off').classList.add('glow')
+    }
+
+    change('setting_catfriend', pref)
+}
+
 
 // MOD LOAD
     // dark static
@@ -360,3 +384,11 @@ if (check('setting_altbindstrafe')) {
 else {
     document.querySelector('.strafe_on').classList.remove('glow')
     document.querySelector('.strafe_off').classList.add('glow')}
+
+    // catfriend
+if (check('setting_catfriend')) {
+    document.querySelector('.catfriend_on').classList.add('glow')
+    document.querySelector('.catfriend_off').classList.remove('glow')}
+else {
+    document.querySelector('.catfriend_on').classList.remove('glow')
+    document.querySelector('.catfriend_off').classList.add('glow')}

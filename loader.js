@@ -13,12 +13,12 @@ CREDITS:
     HAMMER FUNFRIEND, Random Velzie Event
         BY: Niaandovah (@niaandova on discord)
     bettergak
-        BY: pocl.v (@pocl.v on discord), octo (@ocktoe on discord)
+        BY: pocl.v (@pocl.v on discord)
     nuh uh
         BY: Cyril (@cantharus on discord)
     BetterNAV
-        BY: Overcast System (@overcastwarmth on discord)
-    normal moth, normalist, bitch!
+        BY: Warmth System (@overcastwarmth on discord)
+    normal moth, normalest, bitch!
         BY: sawlf (@sawlferton on discord)
     bad apple on gakvu's poncho
         BY: garlic (@garlic_os on discord)
@@ -30,6 +30,10 @@ CREDITS:
         BY: Zyra (@zyra4581 on discord)
     sidestep/strafing
         BY: Avidya (@solitai7e on discord)
+    catfriend
+        BY: jill (@oatmealine on discord)
+    akizet fuckign dies
+        BY: SPARKLEFRIEND (@twilight.sparkle on discord)
     darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny, council's alternate dance
         BY: max/dem (@the_dem on discord)
 
@@ -45,12 +49,8 @@ MORE MODS TO ADD:
         BY: octo
     susie n kris
         BY: max
-    akizet_fuckign_dies
-        BY: sparklefriend
-    catfriend
-        BY: oatmealine
 
-NOTICE :: 'total count at 37'
+NOTICE :: 'total count at 39'
 */
 
 
@@ -73,6 +73,7 @@ switch(page.path) {
     case "/local/ocean/embassy/": addResources([
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+        "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/akizetfuckigndies.js",
         ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
 
     case "/local/ocean/ship/interview/": addResources([
@@ -115,6 +116,7 @@ addResources([
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betternav.js",
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/expanded_ent.js", ()=>{return check('setting_expandedent')}],
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/corruobserving.js", ()=>{return check('setting_corruobserver')}]
+    ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/catfriend.js", ()=>{return check('setting_catfriend')}]
 ])
 
 
@@ -138,6 +140,7 @@ document.addEventListener('corru_loaded', ()=>{
         case "/local/ocean/embassy/": addResources([
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/bettergak.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakponcho.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/akizetfuckigndies.js",
             ["https://dudemine.com/upload/mods/double_enemies.js", ()=>{return check('setting_doubled')}]],); break;
     
         case "/local/ocean/ship/interview/": addResources([
