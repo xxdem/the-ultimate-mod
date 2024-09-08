@@ -4,32 +4,32 @@
 the mega-modpack featuring nearly ALL mods created for corru.observer, to be loaded all at once
 
 CREDITS:
-    More Decline Buttons, More Velzie's glee, Vs. Call Research, Fintrusive, Missing Entities, Overcoherent Waters
+    More Decline Buttons, More Velzie's glee, Vs. Call Research, Fintrusive, Missing Enemies, Overcoherent Waters
         BY: adr (@adr_furret on discord)
     Quieter Masks, Stowaway Unity
-        BY: agent7 (@agent7 on discord)
-    100% Velzie's Glee, Doubled EVILMODE Entities, Laughterhouse Self-proc
-        BY: dudemine (@dudemine on discord)
+        BY: Agent7 (@agent7 on discord)
+    100% Velzie's Glee, Doubled Enemies, Laughterhouse Self-proc
+        BY: DudeMine (@dudemine on discord)
     HAMMER FUNFRIEND, Random Velzie Event
         BY: Niaandovah (@niaandova on discord)
     bettergak
         BY: pocl.v (@pocl.v on discord), octo (@ocktoe on discord)
     nuh uh
-        BY: cyril (@cantharus on discord)
+        BY: Cyril (@cantharus on discord)
     BetterNAV
-        BY: overcast system (@overcastwarmth on discord)
+        BY: Overcast System (@overcastwarmth on discord)
     normal moth, normalist, bitch!
         BY: sawlf (@sawlferton on discord)
     bad apple on gakvu's poncho
         BY: garlic (@garlic_os on discord)
     bozko smash
-        BY: shaman (@shaseng on discord)
+        BY: Shaman (@shaseng on discord)
     ozoparty
         BY: newmoonwastaken (@newmoonwastaken on discord)
     A Bit More Than Koritz
-        BY: zyra
+        BY: Zyra (@zyra4581 on discord)
     sidestep/strafing
-        BY: avidya
+        BY: Avidya (@solitai7e on discord)
     darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny, council's alternate dance
         BY: max/dem (@the_dem on discord)
 
@@ -112,7 +112,7 @@ addResources([
     // run once but not on corru_loaded
 addResources([
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/darkstatic.js", ()=>{return check('setting_flashing')}],
-    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betterNAV.js",
+    "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/betternav.js",
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/expanded_ent.js", ()=>{return check('setting_expandedent')}],
     ["https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/corruobserving.js", ()=>{return check('setting_corruobserver')}]
 ])
