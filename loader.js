@@ -34,6 +34,8 @@ CREDITS:
         BY: jill (@oatmealine on discord)
     akizet fuckign dies
         BY: SPARKLEFRIEND (@twilight.sparkle on discord)
+    disco elysium
+        BY: TD (@.td. on discord)
     darkstatic, DIALOGUE TELEPHONE::intro, ::/FORD/, noSpin, ExpandedENT, cerveza cristal, kazki & bozko VO (discovery), kazki VO (suspicion), gakvu fools, THE FUNNY LITTLE MAZE, corru observin', collapse funny, council's alternate dance
         BY: max/dem (@the_dem on discord)
 
@@ -105,7 +107,7 @@ addResources([
     ["https://file.garden/ZfLavVA4xzfd-zhM/quiet_masks.js", ()=>{return check('setting_silentmasks')}],
     "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js",
     "https://file.garden/ZkyoNoBsKjjFvjMv/normal_moth.js",
-    "https://file.garden/ZkyoNoBsKjjFvjMv/normalest.js",
+    "https://file.garden/ZpmqdRbyKSpKbO5L/normalest-catfriendedition.js",
     ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
 ])
 
@@ -171,7 +173,7 @@ document.addEventListener('corru_loaded', ()=>{
         ["https://file.garden/ZfLavVA4xzfd-zhM/quiet_masks.js", ()=>{return check('setting_silentmasks')}],
         "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/sysmenu_mods.js",
         "https://file.garden/ZkyoNoBsKjjFvjMv/normal_moth.js",
-        "https://file.garden/ZkyoNoBsKjjFvjMv/normalest.js",
+        "https://file.garden/ZpmqdRbyKSpKbO5L/normalest-catfriendedition.js",
         ["https://file.garden/ZkyoNoBsKjjFvjMv/normaler.js", ()=>{return check('setting_normalmoth')}]
     ])
 
@@ -207,6 +209,7 @@ function addAdditionalResources() {
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/kazki_vo.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/gakvufools.js",
             "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/akizetfuckigndies.js",
+            "https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/disco_elysium.js",
             ["https://file.garden/ZBykMtEMpVTUWZ-e/collapsefunny.js", ()=>{return check("fbx__ep2intro-end")}],
         ]); break;
 
