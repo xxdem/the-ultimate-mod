@@ -35,6 +35,12 @@ body.insertAdjacentHTML('beforeend', `<style>
 #eyefriend {
     --buddyimg: url(https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/catproxyfriend.gif) !important;
 }
+
+
+/* compatibility with collapse funny's funfriend */
+.actor-funfriendfunny .dialogue-portrait {
+    --background-image: url(https://file.garden/ZBykMtEMpVTUWZ-e/ULTIMATE_MODPACK/catfriend.gif) !important;
+}
 </style>`)
 
 
@@ -62,7 +68,7 @@ function processDialogueObject(generated) {
     for (const k of Object.keys(generated)) {
         if (!generated[k].body) continue;
         for (const line of generated[k].body) {
-        if (line.actor === 'funfriend' || line.actor === 'proxyfriend') {
+        if (line.actor === 'funfriend' || line.actor === 'proxyfriend' || line.actor === 'funfriendfunny') {
             line.text = uwuify(line.text);
         }}
     }
@@ -86,7 +92,7 @@ if (env.dialogues) {
 
     // apply onto chatter
 chatter = (orig => { return data => {
-    if (data.actor === 'funfriend' || data.actor === 'proxyfriend') {
+    if (data.actor === 'funfriend' || data.actor === 'proxyfriend' || data.actor === 'funfriendfunny') {
         data.text = uwuify(data.text);
     }
     
